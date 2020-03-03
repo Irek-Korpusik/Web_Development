@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Weather Forecast</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <style> 
+      .column {
+		display: inline-block;
+		width: 100px;
+		height: 0px;
+		margin: 0px;
+	}
+	
+	.hidden {
+		display: none;
+	}
+	
+	.unhide {
+		display: inline-block;
+	}
+    </style>
+      
+</head>  
+ <body>
+<form id="myForm">
+        
+         <p>Enter a location: </p>
+    
+        <input  type="text" id="location" name = "city" size="30" placeholder="Location" 
+               ><br><br>
+          
+        Temperature:
+    
+        <select  id="units" name="temperature" > 
+           
+            <option  value="metric">Celsius</option>
+            <option  value="imperial">Fahrenheit</option>
+            
+        </select>
+        
+        <select  id = "cnt" name="days" > 
+           
+            <option  value="1">Day 1</option>
+            <option  value="2">Day 2</option>
+            <option  value="3">Day 3</option>
+            <option  value="4">Day 4</option>
+            <option  value="5">Day 5</option>
+            <option  value="6">Day 6</option>
+        </select>
+        <br><br>
+        <input type="checkbox" id ="checkedPressure" value="Pressure" checked>Pressure
+        <input type="checkbox" id ="checkedHumidity" value="Humidity" checked>Humidity
+        <input type="checkbox" id ="checkedWind" value="Wind speed" checked>Wind speed<br><br>
+        <input type="button" onclick="newMap()" value="Go">
+        
+        
+    </form>     
+<div id="googleMap" style="width:200px;height:450px;"></div>
+     
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+          background: white;
+      }
+      #map {
+        height: 100%;
+      }
+        
+    
+}
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+        height: 100%;
+      }
+    </style>
+
+  <body>
+    <div id="map"></div>
+    <script>
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 53.382476, lng: -6.313367 },
+          zoom: 13
+        });
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBYMnJFxxW29yMLMJmrMo5KIjmqwqrsxAg&callback=initMap"
+    async defer>
+      
+      
+      
+      </script>
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    </body>
+</html>
